@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERMINAL SYSTEM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+<div class="loader-box">
+
+<h1 class="loader-title">ACCESSING SYSTEM...</h1>
+<p class="loader-text">Decrypting profile data...</p>
+
+<div class="loading-bar">
+<div class="loading-progress"></div>
+</div>
+
+</div>
+</div>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrix"></canvas>
+
+<nav>
+<h2 class="logo">CONSOLE</h2>
+
+<div class="menu">
+<a href="index.html">HOME</a>
+<a href="about.html">TERMINAL</a>
+</div>
+</nav>
+
+<section class="biodata">
+
+<h1 class="title">AUTHORIZED PROFILE</h1>
+
+<div class="profile-container">
+
+<div class="bubble">
+
+<h2>IDENTITY DATA</h2>
+
+<table>
+
+<tr>
+<td>User ID</td>
+<td>:</td>
+<td> VX-017 </td>
+</tr>
+
+<tr>
+<td>Status</td>
+<td>:</td>
+<td>Online</td>
+</tr>
+
+<tr>
+<td>Region</td>
+<td>:</td>
+<td>ID</td>
+</tr>
+
+<tr>
+<td>Access Tier</td>
+<td>:</td>
+<td>Level 5</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="bubble">
+
+<h2>SYSTEM SKILLS</h2>
+
+<p>• C++ Logic Programming</p>
+<p>• Web Interface Design</p>
+<p>• Database Management</p>
+<p>• System Architecture Thinking</p>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">◀ RETURN</a>
+
+</section>
+
+<script src="matrix.js"></script>
+
+<script>
+window.addEventListener("load", () => {
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none"
+
+},2000)
+
+})
+</script>
+
+</body>
+</html>
