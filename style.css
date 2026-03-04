@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
+
+
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #111;
+    border-bottom: 2px solid #ff0000;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.logo {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(24px, 5vw, 40px);
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.hero p {
+    color: #ccc;
+}
+
+/* BIODATA */
+.biodata {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.card {
+    background: #111;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 30px;
+    background: transparent;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff0000;
+    color: black;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* TITLE */
+.title {
+    font-size: 40px;
+    color: #ff0000;
+    text-align: center;
+    text-shadow: 0 0 20px #ff0000;
+    margin-bottom: 50px;
+}
+
+/* CONTAINER */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* BUBBLE CARD */
+.bubble {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #ff0000;
+    border-radius: 25px;
+    padding: 40px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.bubble:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #ff0000;
+}
+
+.bubble h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* TABLE STYLE */
+table {
+    width: 100%;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    color: #ddd;
+}
+
+/* BACK BUTTON FIXED */
+.back-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    padding: 12px 25px;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    background: rgba(0,0,0,0.7);
+}
+
+.back-btn:hover {
+    background: #ff0000;
+    color: black;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-box{
+text-align:center;
+color:#ff0000;
+font-family:monospace;
+}
+
+.loader-title{
+font-size:28px;
+text-shadow:0 0 10px #ff0000;
+margin-bottom:20px;
+}
+
+.loader-text{
+color:#aaa;
+margin-bottom:20px;
+}
+
+.loading-bar{
+width:220px;
+height:6px;
+background:#111;
+border:1px solid #ff0000;
+border-radius:10px;
+overflow:hidden;
+}
+
+.loading-progress{
+width:0%;
+height:100%;
+background:#ff0000;
+animation:loading 2s linear forwards;
+}
+
+@keyframes loading{
+0%{width:0}
+100%{width:100%}
+}
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+align-items:center;
+gap:10px;
+padding:15px;
+}
+
+nav div{
+display:flex;
+gap:15px;
+}
+
+.hero{
+padding:80px 20px;
+}
+
+.title{
+font-size:28px;
+}
+
+.profile-container{
+flex-direction:column;
+align-items:center;
+}
+
+.bubble{
+width:90%;
+padding:25px;
+}
+
+table{
+font-size:16px;
+}
+
+.back-btn{
+right:15px;
+bottom:15px;
+}
+
+}
